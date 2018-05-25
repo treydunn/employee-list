@@ -1,22 +1,25 @@
-<button (click)="toggleEmployeeList()">
+<div class="well">
+	<button (click)="toggleEmployeeList()" type="button" class="btn btn-defaults">
     {{(showEmployees) ? 'Hide' : 'Show' }} Employees
-</button>
-<table *ngIf="showEmployees">
-	<thead>
-		<th>
-			Profile
-		</th>
-		<th>
-			Employee Name
-		</th>
-		<th>
-			Job Title
-		</th>
-	</thead>
-	<tbody>
-		<tr *ngFor="let employee of employees">
-			<employee-item [employee]="employee"></employee-item>
-		</tr>
-	</tbody>
-</table>
+	</button>
+</div>
+
+<div class="table-responsive">
+	<table *ngIf="showEmployees" class="table">
+		<thead>
+			<th>
+				Profile
+			</th>
+			<th>
+				Employee Name
+			</th>
+			<th>
+				Job Title
+			</th>
+		</thead>
+		<tbody>
+			<tr employee-item *ngFor="let employee of employees" [employee]="employee"></tr>
+		</tbody>
+	</table>
+</div>
   
