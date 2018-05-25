@@ -10,7 +10,6 @@ export class EmployeeService {
    * @name getEmployees
    * @desc Returns a list of employees. 
    * @returns {Employee[]}
-   * @memberOf Factories.Logger
    */
   getEmployees(): Employee[] {
     return EMPLOYEES;
