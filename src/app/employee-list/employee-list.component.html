@@ -1,0 +1,22 @@
+<button (click)="toggleEmployeeList()">
+    {{(showEmployees) ? 'Hide' : 'Show' }} Employees
+</button>
+<table *ngIf="showEmployees">
+	<thead>
+		<th>
+			Profile
+		</th>
+		<th>
+			Employee Name
+		</th>
+		<th>
+			Job Title
+		</th>
+	</thead>
+	<tbody>
+		<tr *ngFor="let employee of employees">
+			
+		</tr>
+	</tbody>
+</table>
+  
